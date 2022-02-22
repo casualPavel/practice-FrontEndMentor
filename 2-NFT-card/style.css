@@ -12,7 +12,6 @@
 --White: hsl(0, 0%, 100%);
 }
 
-
 html {
     font-family: "Outfit", sans-serif;
 }
@@ -60,6 +59,8 @@ h2 {
 
 .card-image {
     position: relative;
+    height: 300px;
+    width: 300px;
 }
 
 .card-image .overlay {

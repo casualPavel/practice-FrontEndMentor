@@ -1,36 +1,13 @@
-/* # Front-end Style Guide
-
-## Layout
-
-The designs were created to the following widths:
+/* The designs were created to the following widths:
 
 - Mobile: 375px
 - Desktop: 1440px
 
-## Colors
-
-### Primary
-
-- Pale blue: hsl(225, 100%, 94%)
-- Bright blue: hsl(245, 75%, 52%)
-
-### Neutral
-
-- Very pale blue: hsl(225, 100%, 98%)
-- Desaturated blue: hsl(224, 23%, 55%)
-- Dark blue: hsl(223, 47%, 23%)
-
-## Typography
-
-### Body Copy
-
-- Font size (paragraph): 16px
-
-### Font
-
 - Family: [Red Hat Display](https://fonts.google.com/specimen/Red+Hat+Display)
 - Weights: 500, 700, 900 */
+
 @import url(https://fonts.google.com/specimen/Red+Hat+Display);
+@import url(https://fonts.google.com/specimen/Montserrat);
 
 :root {
     --pale-blue: hsl(225, 100%, 94%);
@@ -40,8 +17,15 @@ The designs were created to the following widths:
     --dark-blue: hsl(223, 47%, 23%);
 }
 
-html {
-    font-family: "Red Hat Display", cursive;
+* {
+    border: 1px solid blue;
+}
+
+html { 
+    /* WHY is it not loading this font?! */
+    /* font-family: "RedHatDisplay", cursive; */
+    /* END WHY */
+    font-family: "Montserrat", cursive;
 }
 
 body {
@@ -51,4 +35,77 @@ body {
     background-color: var(--pale-blue);
     margin: 0;
     padding: 0;
+}
+
+p {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.container {
+    display: flex;
+}
+
+.card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    width: 450px;
+    height: 700px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.description {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.description h2 {
+    font-weight: 800;
+    padding-bottom: 15px;
+}
+
+.description p {
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.purchase-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--vp-blue);
+}
+
+img {
+    max-width: 100%;
+  }
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-ok {
+    background-color: var(--bright-blue);
+    width: 70%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0px 13px 20px rgba(0,0,0,0.2);
+}
+
+.btn-cancel {
+    width: 100%;
+    padding: 15px;
 }
